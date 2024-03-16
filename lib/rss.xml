@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AIGC]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>AIGC</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 16 Mar 2024 08:45:58 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 16 Mar 2024 08:45:57 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[安装 ComfyUI]]></title><description><![CDATA[ 
+ <br><br><br><br>git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+Copy<br>激活虚拟环境<br>conda activate aigc
+Copy<br>安装 torch<br>pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 xformers
+Copy<br>如果出现“Torch not compiled with CUDA enabled”错误，需要先卸载 torch 后再次安装：<br>pip uninstall torch
+Copy<br>安装所需依赖：<br>pip install -r requirements.txt
+Copy<br><br><br><br><br><br>curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+sh Miniconda3-latest-MacOSX-arm64.sh
+Copy<br><br><br>conda install pytorch torchvision torchaudio -c pytorch-nightly
+Copy<br><br>pip3 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+Copy<br><br>import torch
+if torch.backends.mps.is_available():
+    mps_device = torch.device("mps")
+    x = torch.ones(1, device=mps_device)
+    print (x)
+else:
+    print ("MPS device not found.")
+Copy<br>打印的内容为：<br>tensor([1.], device='mps:0')
+Copy<br><br>与 Windows 的安装教程一致<br><br>使用 python main.py --force-fp16 命令启动。]]></description><link>comfyui/install_comfyui_on_win.html</link><guid isPermaLink="false">ComfyUI/install_comfyui_on_win.md</guid><pubDate>Fri, 15 Mar 2024 15:10:02 GMT</pubDate></item><item><title><![CDATA[README]]></title><description><![CDATA[ 
+ ]]></description><link>comfyui/readme.html</link><guid isPermaLink="false">ComfyUI/README.md</guid><pubDate>Fri, 15 Mar 2024 14:27:05 GMT</pubDate></item><item><title><![CDATA[CLIP]]></title><description><![CDATA[ 
+ <br><br>CLIP 使用类似 ViT 的视觉变换器来获取视觉特征，并使用因果语言模型来获取文本特征。然后将文本和视觉特征投影到具有相同维度的潜在空间。]]></description><link>glossary/clip.html</link><guid isPermaLink="false">Glossary/CLIP.md</guid><pubDate>Sat, 16 Mar 2024 08:41:44 GMT</pubDate></item><item><title><![CDATA[Conda]]></title><description><![CDATA[ 
+ <br><br>由 <a data-tooltip-position="top" aria-label="https://conda.io" rel="noopener" class="external-link" href="https://conda.io" target="_blank">Anaconda</a> 发布的开源虚拟环境和包管理工具，可以实现跨平台的包管理和环境管理，解决依赖关系问题。]]></description><link>glossary/conda.html</link><guid isPermaLink="false">Glossary/Conda.md</guid><pubDate>Sat, 16 Mar 2024 08:42:07 GMT</pubDate></item><item><title><![CDATA[GLOSSARY]]></title><description><![CDATA[ 
+ <br><a data-href="CLIP" href="/glossary/clip.html" class="internal-link" target="_self" rel="noopener">CLIP</a><br><a data-href="Tensor" href="/glossary/tensor.html" class="internal-link" target="_self" rel="noopener">Tensor</a><br><a data-href="U-Net" href="/glossary/u-net.html" class="internal-link" target="_self" rel="noopener">U-Net</a><br><a data-href="Transformer" href="/glossary/transformer.html" class="internal-link" target="_self" rel="noopener">Transformer</a><br><a data-href="Conda" href="/glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a>]]></description><link>glossary/glossary.html</link><guid isPermaLink="false">Glossary/GLOSSARY.md</guid><pubDate>Sat, 16 Mar 2024 08:42:08 GMT</pubDate></item><item><title><![CDATA[IPAdapter]]></title><description><![CDATA[ 
+ <br><br><br>加粗的两个模型使用了 LAION 的视觉编码器]]></description><link>glossary/ipadapter.html</link><guid isPermaLink="false">Glossary/IPAdapter.md</guid><pubDate>Fri, 15 Mar 2024 14:27:05 GMT</pubDate></item><item><title><![CDATA[Tensor]]></title><description><![CDATA[ 
+ <br><br>是一个可用来表示在一些向量、标量和其他张量之间的线性关系的多线性函数，这些线性关系的基本例子有内积、外积、线性映射以及笛卡儿积。其坐标在  维空间内，有  个分量的一种量，其中每个分量都是坐标的函数，而在坐标变换时，这些分量也依照某些规则作线性变换。 称为该张量的秩或阶（与矩阵的秩和阶均无关系）。]]></description><link>glossary/tensor.html</link><guid isPermaLink="false">Glossary/Tensor.md</guid><pubDate>Sat, 16 Mar 2024 08:41:53 GMT</pubDate></item><item><title><![CDATA[Transformer]]></title><description><![CDATA[ 
+ <br><br>一种 Deep Learning 模型，它采用了自我关注机制，可以将输入的文本提示转换为 token 嵌入向量。]]></description><link>glossary/transformer.html</link><guid isPermaLink="false">Glossary/Transformer.md</guid><pubDate>Sat, 16 Mar 2024 08:42:03 GMT</pubDate></item><item><title><![CDATA[U-Net]]></title><description><![CDATA[ 
+ <br><br>基于 CNN 的一种分割模型，可以实现对图像进行语义分割，例如自动驾驶、自动抠图等。]]></description><link>glossary/u-net.html</link><guid isPermaLink="false">Glossary/U-Net.md</guid><pubDate>Sat, 16 Mar 2024 08:41:59 GMT</pubDate></item><item><title><![CDATA[虚拟环境]]></title><description><![CDATA[ 
+ <br><br>conda&nbsp;是由 <a data-tooltip-position="top" aria-label="https://conda.io" rel="noopener" class="external-link" href="https://conda.io" target="_blank">Anaconda</a> 发布的开源虚拟环境和包管理工具，可以实现跨平台的包管理和环境管理，解决依赖关系问题。<br>conda 的依赖一般安装在 conda 软件目录下。<br><br>
+<br><a data-tooltip-position="top" aria-label="https://docs.conda.io/en/latest/miniconda.html" rel="noopener" class="external-link" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>：轻量级版本，只包含 conda 工具和一些基本包
+<br><a data-tooltip-position="top" aria-label="https://docs.anaconda.com/anaconda/install/" rel="noopener" class="external-link" href="https://docs.anaconda.com/anaconda/install/" target="_blank">Anaconda</a>：大型科学计算发行版，包含了许多科学计算和数据分析相关的包
+<br><br>查看已有 conda 环境：<br>conda env
+Copy<br>创建 conda 环境：<br>conda create --name &lt;环境名称&gt; &lt;要安装的包&gt;
+# Example
+conda create --name myenv python=3.8 numpy pandas
+Copy<br>--name可以简写为 -n<br>激活虚拟环境：<br>conda activate &lt;环境名称&gt;
+# Example
+conda activate myenv
+Copy<br>安装包：<br>conda install &lt;包名&gt;
+# Example
+conda install requests
+Copy<br>查看已安装的包：<br>conda list
+Copy<br>退出虚拟环境：<br>conda deactivate
+Copy<br>环境配置文件：<br># 创建环境配置文件
+conda env export &gt; environment.yml
+# 根据配置文件创建环境
+conda env create -f environment.yml
+Copy<br>卸载环境：<br>conda env remove --name &lt;环境名称&gt;
+# Example
+conda env remove --name myenv
+Copy]]></description><link>glossary/venv.html</link><guid isPermaLink="false">Glossary/venv.md</guid><pubDate>Fri, 15 Mar 2024 14:27:05 GMT</pubDate></item><item><title><![CDATA[如何安装 Stable Diffusion WebUI]]></title><description><![CDATA[ 
+ <br><br>]]></description><link>sd_webui/如何安装-stable-diffusion-webui.html</link><guid isPermaLink="false">SD_WebUI/如何安装 Stable Diffusion WebUI.md</guid><pubDate>Sat, 16 Mar 2024 08:44:40 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>
+<br>
+<a class="internal-link" data-href="README.md" href="/comfyui/readme.html" target="_self" rel="noopener">介绍</a>
+
+<br>
+<a class="internal-link" data-href="Preparation.md" href="/preparation.html" target="_self" rel="noopener">前期准备</a>
+
+<br>
+<a class="internal-link" data-href="sdwebui/README.md" href="/sdwebui/README.md" target="_self" rel="noopener">SD WebUI</a>
+
+<br><a class="internal-link" data-href="如何安装 Stable Diffusion WebUI.md" href="/sd_webui/如何安装-stable-diffusion-webui.html" target="_self" rel="noopener">安装</a>
+
+
+<br>
+<a class="internal-link" data-href="ComfyUI/README.md" href="/comfyui/readme.html" target="_self" rel="noopener">ComfyUI</a>
+
+<br><a class="internal-link" data-href="install_comfyui_on_win.md" href="/comfyui/install_comfyui_on_win.html" target="_self" rel="noopener">安装</a>
+
+
+<br>
+Other
+
+<br><a class="internal-link" data-href="IPAdapter.md" href="/glossary/ipadapter.html" target="_self" rel="noopener">IP Adapter</a>
+<br><a class="internal-link" data-href="venv.md" href="/glossary/venv.html" target="_self" rel="noopener">虚拟环境</a>
+
+
+]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sat, 16 Mar 2024 08:45:32 GMT</pubDate></item><item><title><![CDATA[前期准备]]></title><description><![CDATA[ 
+ <br><br><br>Step 1. 打开 <a data-tooltip-position="top" aria-label="https://docs.conda.io/en/latest/miniconda.html" rel="noopener" class="external-link" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>，下载并安装对应的 <a data-href="Conda" href="/glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a> 版本。<br><br>
+注意：MacOS(Intel) 不在考虑范围之内
+<br>Step 2. 创建一个名为 aigc 、Python 版本为 3.10 的虚拟环境<br>conda create --name aigc python=3.10
+Copy<br>Step 3. 激活虚拟环境<br>conda activate comfyui
+Copy<br>Step 4. 更新 pip 包管理器<br>pip install --upgrade pip
+Copy<br>Step 5. 退出虚拟环境<br>conda deactivate
+Copy]]></description><link>preparation.html</link><guid isPermaLink="false">Preparation.md</guid><pubDate>Sat, 16 Mar 2024 08:44:19 GMT</pubDate></item></channel></rss>
