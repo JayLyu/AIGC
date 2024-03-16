@@ -1,13 +1,32 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AIGC]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>AIGC</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 16 Mar 2024 09:02:04 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 16 Mar 2024 09:02:03 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[前期准备]]></title><description><![CDATA[ 
- <br><br>Step 1. 打开 <a data-tooltip-position="top" aria-label="https://docs.conda.io/en/latest/miniconda.html" rel="noopener" class="external-link" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>，下载并安装对应的 <a data-href="Conda" href="/900_glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a> 版本。<br><br>
-注意：MacOS(Intel) 不在考虑范围之内
-<br>Step 2. 创建一个名为 aigc 、Python 版本为 3.10 的虚拟环境<br>conda create --name aigc python=3.10
-Copy<br>Step 3. 激活虚拟环境<br>conda activate comfyui
-Copy<br>Step 4. 更新 pip 包管理器<br>pip install --upgrade pip
-Copy<br>Step 5. 退出虚拟环境<br>conda deactivate
-Copy]]></description><link>100_prepare/前期准备.html</link><guid isPermaLink="false">100_Prepare/前期准备.md</guid><pubDate>Sat, 16 Mar 2024 08:52:21 GMT</pubDate></item><item><title><![CDATA[如何安装 SD WebUI]]></title><description><![CDATA[ 
- <br><br>]]></description><link>200_sd_webui/如何安装-sd-webui.html</link><guid isPermaLink="false">200_SD_WebUI/如何安装 SD WebUI.md</guid><pubDate>Sat, 16 Mar 2024 08:44:40 GMT</pubDate></item><item><title><![CDATA[安装 ComfyUI]]></title><description><![CDATA[ 
- <br><br><br><br>git clone https://github.com/comfyanonymous/ComfyUI.git
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AIGC]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>AIGC</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 16 Mar 2024 09:43:16 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 16 Mar 2024 09:43:15 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[如何安装 SD WebUI]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://github.com/AUTOMATIC1111/stable-diffusion-webui" rel="noopener" class="external-link" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">stable-diffusion-webui</a> 是基于 Gradio 搭建的 stable diffusion 的 GUI 界面。<br><br>
+<br>首先，需要根据 <a data-href="前期准备" href="/100_prepare/前期准备.html" class="internal-link" target="_self" rel="noopener">前期准备</a> 的内容，在系统中安装虚拟环境
+<br>然后，还需要下载并安装 <a data-tooltip-position="top" aria-label="https://git-scm.com/download/win" rel="noopener" class="external-link" href="https://git-scm.com/download/win" target="_blank">git</a>
+<br>提前下载好 Stable Diffusion 模型（没有模型会启动失败）
+<br><br>Step 1. 打开 PowerShell，激活虚拟环境<br>conda activate aigc
+Copy<br>Step 2. 进入 Documents 文件夹，将 SD WebUI 克隆到当前文件夹<br>cd documents
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+Copy<br>将提前下载好的模型存放到 stable-diffusion-webui/models/stable-diffusion 文件夹内<br>Step 3. 修改 stable-diffusion-webui 文件夹内的 webui-user.bat 文件，确保每次启动时自动激活虚拟环境<br>@echo off
+
+conda activate aigc
+
+set PYTHON=
+set GIT=
+set VENV_DIR=
+set COMMANDLINE_ARGS=
+
+call webui.bat
+Copy<br>Step 4. 双击 webui-user.bat 启动 WebUI，启动过程中，会自动安装所需的依赖。<br><br><br>Step 1. 打开 Terminal 并输入以下命令开始安装 Homebrew<br>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Copy<br>安装完成后，需要关闭 Terminal，或重新打开一个 Terminal 继续输入命令。<br>Step 2. 安装 Python 3.10<br>brew install cmake protobuf rust python@3.10 git wget
+Copy<br>Step 3. 进入 Documents 文件夹，将 SD WebUI 克隆到当前文件夹<br>cd documents
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+Copy<br>Step 4. 将提前下载好的模型存放到 stable-diffusion-webui/models/stable-diffusion 文件夹内<br>Step 5. 使用 Terminal 进入 WebUI 文件夹，激活虚拟环境并启动 WebUI<br>cd stable-diffusion-webui
+conda activate aigc
+./webui.sh
+Copy<br><br>如果电脑中已经安装了 Homebrew，那么可以跳过 Step 1 和 Step 2，直接克隆仓库并启动 WebUI。]]></description><link>200_sd_webui/如何安装-sd-webui.html</link><guid isPermaLink="false">200_SD_WebUI/如何安装 SD WebUI.md</guid><pubDate>Sat, 16 Mar 2024 09:42:02 GMT</pubDate></item><item><title><![CDATA[如何安装 ComfyUI]]></title><description><![CDATA[ 
+ <br><br>
+<br>首先，需要根据 <a data-href="前期准备" href="/100_prepare/前期准备.html" class="internal-link" target="_self" rel="noopener">前期准备</a> 的内容，在系统中安装虚拟环境
+<br><br><br>git clone https://github.com/comfyanonymous/ComfyUI.git
 cd ComfyUI
 Copy<br>激活虚拟环境<br>conda activate aigc
 Copy<br>安装 torch<br>pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 xformers
@@ -25,7 +44,14 @@ if torch.backends.mps.is_available():
 else:
     print ("MPS device not found.")
 Copy<br>打印的内容为：<br>tensor([1.], device='mps:0')
-Copy<br><br>与 Windows 的安装教程一致<br><br>使用 python main.py --force-fp16 命令启动。]]></description><link>300_comfyui/如何安装-comfyui.html</link><guid isPermaLink="false">300_ComfyUI/如何安装 ComfyUI.md</guid><pubDate>Fri, 15 Mar 2024 15:10:02 GMT</pubDate></item><item><title><![CDATA[CLIP]]></title><description><![CDATA[ 
+Copy<br><br>与 Windows 的安装教程一致<br><br>使用 python main.py --force-fp16 命令启动。]]></description><link>300_comfyui/如何安装-comfyui.html</link><guid isPermaLink="false">300_ComfyUI/如何安装 ComfyUI.md</guid><pubDate>Sat, 16 Mar 2024 09:42:34 GMT</pubDate></item><item><title><![CDATA[前期准备]]></title><description><![CDATA[ 
+ <br><br>Step 1. 打开 <a data-tooltip-position="top" aria-label="https://docs.conda.io/en/latest/miniconda.html" rel="noopener" class="external-link" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>，下载并安装对应的 <a data-href="Conda" href="/900_glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a> 版本。<br><br>
+注意：MacOS(Intel) 不在考虑范围之内
+<br>Step 2. 创建一个名为 aigc 、Python 版本为 3.10 的虚拟环境<br>conda create --name aigc python=3.10
+Copy<br>Step 3. 激活虚拟环境<br>conda activate comfyui
+Copy<br>Step 4. 更新 pip 包管理器<br>pip install --upgrade pip
+Copy<br>Step 5. 退出虚拟环境<br>conda deactivate
+Copy]]></description><link>100_prepare/前期准备.html</link><guid isPermaLink="false">100_Prepare/前期准备.md</guid><pubDate>Sat, 16 Mar 2024 08:52:21 GMT</pubDate></item><item><title><![CDATA[CLIP]]></title><description><![CDATA[ 
  <br><br>CLIP 使用类似 ViT 的视觉变换器来获取视觉特征，并使用因果语言模型来获取文本特征。然后将文本和视觉特征投影到具有相同维度的潜在空间。]]></description><link>900_glossary/clip.html</link><guid isPermaLink="false">900_Glossary/CLIP.md</guid><pubDate>Sat, 16 Mar 2024 08:41:44 GMT</pubDate></item><item><title><![CDATA[Conda]]></title><description><![CDATA[ 
  <br><br>由 <a data-tooltip-position="top" aria-label="https://conda.io" rel="noopener" class="external-link" href="https://conda.io" target="_blank">Anaconda</a> 发布的开源虚拟环境和包管理工具，可以实现跨平台的包管理和环境管理，解决依赖关系问题。]]></description><link>900_glossary/conda.html</link><guid isPermaLink="false">900_Glossary/Conda.md</guid><pubDate>Sat, 16 Mar 2024 08:42:07 GMT</pubDate></item><item><title><![CDATA[GLOSSARY]]></title><description><![CDATA[ 
  <br><a data-href="CLIP" href="/900_glossary/clip.html" class="internal-link" target="_self" rel="noopener">CLIP</a><br><a data-href="Tensor" href="/900_glossary/tensor.html" class="internal-link" target="_self" rel="noopener">Tensor</a><br><a data-href="U-Net" href="/900_glossary/u-net.html" class="internal-link" target="_self" rel="noopener">U-Net</a><br><a data-href="Transformer" href="/900_glossary/transformer.html" class="internal-link" target="_self" rel="noopener">Transformer</a><br><a data-href="Conda" href="/900_glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a>]]></description><link>900_glossary/glossary.html</link><guid isPermaLink="false">900_Glossary/GLOSSARY.md</guid><pubDate>Sat, 16 Mar 2024 08:42:08 GMT</pubDate></item><item><title><![CDATA[IPAdapter]]></title><description><![CDATA[ 
