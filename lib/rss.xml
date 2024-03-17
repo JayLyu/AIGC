@@ -1,4 +1,11 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AIGC]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://aigc.baikong.app/</link><image><url>https://aigc.baikong.app/lib/media/favicon.png</url><title>AIGC</title><link>https://aigc.baikong.app/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 17 Mar 2024 14:52:54 GMT</lastBuildDate><atom:link href="https://aigc.baikong.app/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 17 Mar 2024 14:52:52 GMT</pubDate><copyright><![CDATA[LyuJie]]></copyright><ttl>60</ttl><dc:creator>LyuJie</dc:creator><item><title><![CDATA[前期准备]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AIGC]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://aigc.baikong.app/</link><image><url>https://aigc.baikong.app/lib/media/favicon.png</url><title>AIGC</title><link>https://aigc.baikong.app/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 17 Mar 2024 16:13:20 GMT</lastBuildDate><atom:link href="https://aigc.baikong.app/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 17 Mar 2024 16:13:20 GMT</pubDate><copyright><![CDATA[LyuJie]]></copyright><ttl>60</ttl><dc:creator>LyuJie</dc:creator><item><title><![CDATA[AIGC 目录]]></title><description><![CDATA[ 
+ <br>目录结构：<br>
+<br>10_Prepare：前期准备
+<br>20_SD_WebUI：Stable Diffusion WebUI 相关
+<br>30_ComfyUI：ComfyUI 相关
+<br>40_Other：暂时无法归类的内容
+<br>90_Glossary：词汇表
+<br><br><br><br><br><br><br><br>]]></description><link>https://aigc.baikong.app/300-aigc/aigc-目录.html</link><guid isPermaLink="false">300-AIGC/AIGC 目录.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 17 Mar 2024 14:36:46 GMT</pubDate></item><item><title><![CDATA[前期准备]]></title><description><![CDATA[ 
  <br><br>Step 1. 打开 <a data-tooltip-position="top" aria-label="https://docs.conda.io/en/latest/miniconda.html" rel="noopener" class="external-link" href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>，下载并安装对应的 <a data-href="Conda" href="https://aigc.baikong.app/300-aigc/390-glossary/conda.html" class="internal-link" target="_self" rel="noopener">Conda</a> 版本。<br><br>
 注意：MacOS(Intel) 不在考虑范围之内
 <br>Step 2. 创建一个名为 aigc 、Python 版本为 3.10 的虚拟环境<br>conda create --name aigc python=3.10
@@ -147,8 +154,8 @@ Copy<br>打印的内容为：<br>tensor([1.], device='mps:0')
 Copy<br><br>与 Windows 的安装教程一致<br><br>使用 python main.py --force-fp16 命令启动。]]></description><link>https://aigc.baikong.app/300-aigc/330-comfyui/如何安装-comfyui.html</link><guid isPermaLink="false">300-AIGC/330-ComfyUI/如何安装 ComfyUI.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sat, 16 Mar 2024 09:42:34 GMT</pubDate></item><item><title><![CDATA[SD 模型名与文件名对照表]]></title><description><![CDATA[ 
  <br>模型下载：<a data-tooltip-position="top" aria-label="https://huggingface.co/stabilityai" rel="noopener" class="external-link" href="https://huggingface.co/stabilityai" target="_blank">stabilityai</a><br>]]></description><link>https://aigc.baikong.app/300-aigc/340-other/sd-模型名与文件名对照表.html</link><guid isPermaLink="false">300-AIGC/340-Other/SD 模型名与文件名对照表.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 17 Mar 2024 14:34:57 GMT</pubDate></item><item><title><![CDATA[CLIP]]></title><description><![CDATA[ 
  <br><a data-tooltip-position="top" aria-label="https://github.com/openai/CLIP" rel="noopener" class="external-link" href="https://github.com/openai/CLIP" target="_blank">openai/CLIP</a> 是一种 <a data-href="Text-to-image Model" href="https://aigc.baikong.app/300-development/deep-learning/text-to-image-model.html" class="internal-link" target="_self" rel="noopener">Text-to-image Model</a>，可以根据文本描述检索或生成图像。CLIP 使用类似 ViT 的视觉变换器来获取视觉特征，并使用因果语言模型来获取文本特征。然后将文本和视觉特征投影到具有相同维度的潜在空间。<br>CLIP 由 OpenAI 开发。<br>CLIP 使用了大量互联网数据来训练一个视觉变换器（ViT）和一个文本编码器。
-CLIP 使用类似 ViT<a href="https://aigc.baikong.app/#fn-1-8121bf1a974b82f7" class="footnote-link" target="_self" rel="noopener">[1]</a> 的视觉变换器来获取视觉特征，并使用因果语言模型来获取文本特征。然后将文本和视觉特征投影到具有相同维度的潜在空间。
-<br>CLIP 可以和其他图像生成模型结合，比如 <a data-href="DALL-E" href="https://aigc.baikong.app/300-development/deep-learning/dall-e.html" class="internal-link" target="_self" rel="noopener">DALL-E</a>、<a data-href="ControlNet" href="https://aigc.baikong.app/300-development/stable-diffusion/controlnet.html" class="internal-link" target="_self" rel="noopener">ControlNet</a>，来实现更高质量的图像生成。<br><img alt="CLIP_Contrastive_pre_training.svg" src="https://aigc.baikong.app/lib/media/clip_contrastive_pre_training.svg"><br>
+CLIP 使用类似 ViT<a href="https://aigc.baikong.app/#fn-1-12f138a024904ae2" class="footnote-link" target="_self" rel="noopener">[1]</a> 的视觉变换器来获取视觉特征，并使用因果语言模型来获取文本特征。然后将文本和视觉特征投影到具有相同维度的潜在空间。
+<br>CLIP 可以和其他图像生成模型结合，比如 <a data-href="DALL-E" href="https://aigc.baikong.app/300-development/deep-learning/dall-e.html" class="internal-link" target="_self" rel="noopener">DALL-E</a>、<a data-href="ControlNet" href="https://aigc.baikong.app/300-aigc/stable-diffusion/controlnet.html" class="internal-link" target="_self" rel="noopener">ControlNet</a>，来实现更高质量的图像生成。<br><img alt="CLIP_Contrastive_pre_training.svg" src="https://aigc.baikong.app/lib/media/clip_contrastive_pre_training.svg"><br>
 CLIP 预训练一个图像编码器和一个文本编码器来预测哪些图像与我们数据集中的哪些文本配对。然后我们使用这种行为将 CLIP 变成零样本分类器。我们将数据集的所有类别转换为标题，例如“狗的照片”，并预测标题的类别 CLIP 估计与给定图像的最佳配对。
 <br><img alt="CLIP_Create_dataset_classifier_from_label_text.svg" src="https://aigc.baikong.app/lib/media/clip_create_dataset_classifier_from_label_text.svg"><br>Reference
 
@@ -160,7 +167,7 @@ CLIP 预训练一个图像编码器和一个文本编码器来预测哪些图像
 <br>
 <br>
 Vision Transformer, by Google AI
-<a href="https://aigc.baikong.app/#fnref-1-8121bf1a974b82f7" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
+<a href="https://aigc.baikong.app/#fnref-1-12f138a024904ae2" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
 
 ]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/clip.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/CLIP.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 17 Mar 2024 13:59:09 GMT</pubDate><enclosure url="https://aigc.baikong.app/lib/media/clip_contrastive_pre_training.svg" length="0" type="image/svg+xml"/><content:encoded>&lt;figure&gt;&lt;img src="https://aigc.baikong.app/lib/media/clip_contrastive_pre_training.svg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Conda]]></title><description><![CDATA[ 
  <br><br>由 <a data-tooltip-position="top" aria-label="https://conda.io" rel="noopener" class="external-link" href="https://conda.io" target="_blank">Anaconda</a> 发布的开源虚拟环境和包管理工具，可以实现跨平台的包管理和环境管理，解决依赖关系问题。]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/conda.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/Conda.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sat, 16 Mar 2024 08:42:07 GMT</pubDate></item><item><title><![CDATA[embedding]]></title><description><![CDATA[ 
@@ -173,9 +180,9 @@ torch.__version__
 Copy]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/pytorch.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/Pytorch.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sat, 16 Mar 2024 10:02:40 GMT</pubDate></item><item><title><![CDATA[Tensor]]></title><description><![CDATA[ 
  <br>
 张量（英语：Tensor）是一个可用来表示在一些向量、标量和其他张量之间的线性关系的多线性函数，这些线性关系的基本例子有内积、外积、线性映射以及笛卡儿积。其坐标在  维空间内，有   个分量的一种量，其中每个分量都是坐标的函数，而在坐标变换时，这些分量也依照某些规则作线性变换。 称为该张量的秩或阶（与矩阵的秩和阶均无关系）。
-<br>Tensor 实际上就是一个多维数组<a href="https://aigc.baikong.app/#fn-1-8121bf1a974b82f7" class="footnote-link" target="_self" rel="noopener">[1]</a>，Tensor 的目的是能够创造更高维度的矩阵、向量。<br>在同构的意义下：<br>
+<br>Tensor 实际上就是一个多维数组<a href="https://aigc.baikong.app/#fn-1-12f138a024904ae2" class="footnote-link" target="_self" rel="noopener">[1]</a>，Tensor 的目的是能够创造更高维度的矩阵、向量。<br>在同构的意义下：<br>
 <br>第0阶张量（）为<a data-href="标量" href="https://aigc.baikong.app/标量" class="internal-link" target="_self" rel="noopener">标量</a>
-<br>第1阶张量（）为<a data-href="Vector" href="https://aigc.baikong.app/300-development/deep-learning/mathematics/vector.html" class="internal-link" target="_self" rel="noopener">Vector</a><a href="https://aigc.baikong.app/#fn-2-8121bf1a974b82f7" class="footnote-link" target="_self" rel="noopener">[2]</a>
+<br>第1阶张量（）为<a data-href="Vector" href="https://aigc.baikong.app/300-development/deep-learning/mathematics/vector.html" class="internal-link" target="_self" rel="noopener">Vector</a><a href="https://aigc.baikong.app/#fn-2-12f138a024904ae2" class="footnote-link" target="_self" rel="noopener">[2]</a>
 <br>第2阶张量（）为矩阵
 <br>例如，对于三维空间， 时的张量为此向量 。<br>例如，任意一张彩色图片用三阶张量来表示，三个维度分别是 。如果用张量表示出来，如下图：<br><img alt="Color_picture_tensor_diagram.jpeg" src="https://aigc.baikong.app/lib/media/color_picture_tensor_diagram.jpeg"><br>其中表格横轴表示图片宽度值，纵轴表示图片高度值，每个方格表示一个像素点。例如，第一行第一列的数据为 ，代表 RGB 三原色在图片的这个位置取值为 。<br>Reference
 
@@ -187,11 +194,11 @@ Copy]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/pytorc
 <br>
 <br>
 Multidimensional array
-<a href="https://aigc.baikong.app/#fnref-1-8121bf1a974b82f7" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
+<a href="https://aigc.baikong.app/#fnref-1-12f138a024904ae2" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
 
 <br>
 矢量
-<a href="https://aigc.baikong.app/#fnref-2-8121bf1a974b82f7" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
+<a href="https://aigc.baikong.app/#fnref-2-12f138a024904ae2" class="footnote-backref footnote-link" target="_self" rel="noopener">↩︎</a>
 
 ]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/tensor.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/Tensor.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 21 Jan 2024 09:30:01 GMT</pubDate><enclosure url="https://aigc.baikong.app/lib/media/color_picture_tensor_diagram.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://aigc.baikong.app/lib/media/color_picture_tensor_diagram.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[token]]></title><description><![CDATA[ 
  <br>在自然语言处理中，文本会被分解成不同的 token，每个 token 代表文本中的一个基本语义单位。<br>在 <a data-href="CLIP" href="https://aigc.baikong.app/300-aigc/390-glossary/clip.html" class="internal-link" target="_self" rel="noopener">CLIP</a> 和其他文本处理任务中，token 是指输入文本被分解成的基本单位， 可以是单词、子词或字符等级，用于构建文本的表示形式。通过对这些 token 进行编码和嵌入，可以将文本转换为数值表示形式，以便模型能够理解和处理文本信息。]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/token.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/token.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 17 Mar 2024 14:10:18 GMT</pubDate></item><item><title><![CDATA[Torchvision]]></title><description><![CDATA[ 
@@ -230,11 +237,4 @@ conda env create -f environment.yml
 Copy<br>卸载环境：<br>conda env remove --name &lt;环境名称&gt;
 # Example
 conda env remove --name myenv
-Copy]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/venv.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/venv.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Fri, 15 Mar 2024 14:27:05 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br>目录结构：<br>
-<br>10_Prepare：前期准备
-<br>20_SD_WebUI：Stable Diffusion WebUI 相关
-<br>30_ComfyUI：ComfyUI 相关
-<br>40_Other：暂时无法归类的内容
-<br>90_Glossary：词汇表
-<br><br><br><br><br><br><br><br>]]></description><link>https://aigc.baikong.app/300-aigc/index.html</link><guid isPermaLink="false">300-AIGC/index.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Sun, 17 Mar 2024 14:36:46 GMT</pubDate></item></channel></rss>
+Copy]]></description><link>https://aigc.baikong.app/300-aigc/390-glossary/venv.html</link><guid isPermaLink="false">300-AIGC/390-Glossary/venv.md</guid><dc:creator><![CDATA[LyuJie]]></dc:creator><pubDate>Fri, 15 Mar 2024 14:27:05 GMT</pubDate></item></channel></rss>
