@@ -1,23 +1,38 @@
 {
   "vaultName": "AIGC",
-  "lastExport": 1710582195878,
+  "lastExport": 1710687172381,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager native-scrollbars theme-light",
+  "validBodyClasses": "publish css-settings-manager theme-dark native-scrollbars show-inline-title",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
-    "100_Prepare/前期准备.md",
-    "200_SD_WebUI/如何安装 SD WebUI.md",
-    "300_ComfyUI/如何安装 ComfyUI.md",
-    "900_Glossary/CLIP.md",
-    "900_Glossary/Conda.md",
-    "900_Glossary/GLOSSARY.md",
-    "900_Glossary/IPAdapter.md",
-    "900_Glossary/Tensor.md",
-    "900_Glossary/Transformer.md",
-    "900_Glossary/U-Net.md",
-    "900_Glossary/venv.md",
-    "index.md",
+    "300-AIGC/310-Prepare/前期准备.md",
+    "300-AIGC/320-SDWebUI/Extensions/wd14-tagger.md",
+    "300-AIGC/320-SDWebUI/如何安装 SD WebUI.md",
+    "300-AIGC/330-ComfyUI/Nodes/CLIP Text Encode.md",
+    "300-AIGC/330-ComfyUI/Plugins/ComfyUI-layerdiffusion.md",
+    "300-AIGC/330-ComfyUI/如何安装 ComfyUI.md",
+    "300-AIGC/340-Other/SD 模型名与文件名对照表.md",
+    "300-AIGC/380-Images/CLIP_Contrastive_pre_training.svg",
+    "300-AIGC/380-Images/CLIP_Create_dataset_classifier_from_label_text.svg",
+    "300-AIGC/380-Images/Color_picture_tensor_diagram.jpeg",
+    "300-AIGC/380-Images/unet-architecture.png",
+    "300-AIGC/390-Glossary/CLIP.md",
+    "300-AIGC/390-Glossary/Conda.md",
+    "300-AIGC/390-Glossary/embedding.md",
+    "300-AIGC/390-Glossary/IPAdapter.md",
+    "300-AIGC/390-Glossary/Pytorch.md",
+    "300-AIGC/390-Glossary/Tensor.md",
+    "300-AIGC/390-Glossary/token.md",
+    "300-AIGC/390-Glossary/Torchvision.md",
+    "300-AIGC/390-Glossary/Transformer.md",
+    "300-AIGC/390-Glossary/U-Net.md",
+    "300-AIGC/390-Glossary/venv.md",
+    "300-AIGC/index.md",
+    "lib/media/clip_contrastive_pre_training.svg",
+    "lib/media/clip_create_dataset_classifier_from_label_text.svg",
+    "lib/media/color_picture_tensor_diagram.jpeg",
+    "lib/media/unet-architecture.png",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -66,6 +81,7 @@
     "lib/media/favicon.png",
     "lib/scripts/graph-data.js",
     "lib/styles/obsidian.css",
+    "lib/styles/other-plugins.css",
     "lib/styles/global-variable-styles.css",
     "lib/styles/main-styles.css"
   ],
@@ -118,380 +134,484 @@
     "lib/media/favicon.png",
     "lib/scripts/graph-data.js",
     "lib/styles/obsidian.css",
+    "lib/styles/other-plugins.css",
     "lib/styles/global-variable-styles.css",
     "lib/styles/main-styles.css"
   ],
   "fileInfo": {
-    "index.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 433,
-      "exportedPath": "index.html",
-      "dependencies": []
-    },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/fonts/mathjax_zero.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/mathjax_zero.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/mathjax_main-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-bold.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/mathjax_main-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-italic.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/mathjax_math-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-italic.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/mathjax_main-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-bolditalic.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size1-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size2-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size3-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size4-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_ams-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-bold.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-bold.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-bold.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-italic.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_script-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/mathjax_script-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_typewriter-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-regular.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-bold.woff": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1710582195878,
-      "sourceSize": 7031,
+      "modifiedTime": 1710687172381,
+      "sourceSize": 14969,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1710582195878,
-      "sourceSize": 785,
+      "modifiedTime": 1710687172381,
+      "sourceSize": 1394,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 157786,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1710582195878,
-      "sourceSize": 236,
+      "modifiedTime": 1710687172381,
+      "sourceSize": 524,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1710582195878,
+      "modifiedTime": 1710687172381,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
-    "100_Prepare/前期准备.md": {
-      "modifiedTime": 1710579723015,
+    "300-AIGC/310-Prepare/前期准备.md": {
+      "modifiedTime": 1710687172381,
       "sourceSize": 629,
-      "exportedPath": "100_prepare/前期准备.html",
+      "exportedPath": "300-aigc/310-prepare/前期准备.html",
       "dependencies": []
     },
-    "200_SD_WebUI/如何安装 SD WebUI.md": {
-      "modifiedTime": 1710582195878,
-      "sourceSize": 2092,
-      "exportedPath": "200_sd_webui/如何安装-sd-webui.html",
+    "300-AIGC/320-SDWebUI/Extensions/wd14-tagger.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 4029,
+      "exportedPath": "300-aigc/320-sdwebui/extensions/wd14-tagger.html",
       "dependencies": []
     },
-    "300_ComfyUI/如何安装 ComfyUI.md": {
-      "modifiedTime": 1710582195878,
+    "300-AIGC/320-SDWebUI/如何安装 SD WebUI.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 2187,
+      "exportedPath": "300-aigc/320-sdwebui/如何安装-sd-webui.html",
+      "dependencies": []
+    },
+    "300-AIGC/330-ComfyUI/Nodes/CLIP Text Encode.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 1113,
+      "exportedPath": "300-aigc/330-comfyui/nodes/clip-text-encode.html",
+      "dependencies": []
+    },
+    "300-AIGC/330-ComfyUI/Plugins/ComfyUI-layerdiffusion.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 2058,
+      "exportedPath": "300-aigc/330-comfyui/plugins/comfyui-layerdiffusion.html",
+      "dependencies": []
+    },
+    "300-AIGC/330-ComfyUI/如何安装 ComfyUI.md": {
+      "modifiedTime": 1710687172381,
       "sourceSize": 1635,
-      "exportedPath": "300_comfyui/如何安装-comfyui.html",
+      "exportedPath": "300-aigc/330-comfyui/如何安装-comfyui.html",
       "dependencies": []
     },
-    "900_Glossary/CLIP.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 199,
-      "exportedPath": "900_glossary/clip.html",
+    "300-AIGC/340-Other/SD 模型名与文件名对照表.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 2397,
+      "exportedPath": "300-aigc/340-other/sd-模型名与文件名对照表.html",
       "dependencies": []
     },
-    "900_Glossary/Conda.md": {
-      "modifiedTime": 1710579723015,
+    "300-AIGC/380-Images/CLIP_Contrastive_pre_training.svg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 243418,
+      "exportedPath": "300-aigc/380-images/clip_contrastive_pre_training.svg",
+      "dependencies": []
+    },
+    "300-AIGC/380-Images/CLIP_Create_dataset_classifier_from_label_text.svg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 96112,
+      "exportedPath": "300-aigc/380-images/clip_create_dataset_classifier_from_label_text.svg",
+      "dependencies": []
+    },
+    "300-AIGC/380-Images/Color_picture_tensor_diagram.jpeg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 37284,
+      "exportedPath": "300-aigc/380-images/color_picture_tensor_diagram.jpeg",
+      "dependencies": []
+    },
+    "300-AIGC/380-Images/unet-architecture.png": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 103270,
+      "exportedPath": "300-aigc/380-images/unet-architecture.png",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/CLIP.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 1673,
+      "exportedPath": "300-aigc/390-glossary/clip.html",
+      "dependencies": [
+        "lib/media/clip_contrastive_pre_training.svg",
+        "lib/media/clip_create_dataset_classifier_from_label_text.svg"
+      ]
+    },
+    "300-AIGC/390-Glossary/Conda.md": {
+      "modifiedTime": 1710687172381,
       "sourceSize": 169,
-      "exportedPath": "900_glossary/conda.html",
+      "exportedPath": "300-aigc/390-glossary/conda.html",
       "dependencies": []
     },
-    "900_Glossary/GLOSSARY.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 59,
-      "exportedPath": "900_glossary/glossary.html",
+    "300-AIGC/390-Glossary/embedding.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 456,
+      "exportedPath": "300-aigc/390-glossary/embedding.html",
       "dependencies": []
     },
-    "900_Glossary/IPAdapter.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 1319,
-      "exportedPath": "900_glossary/ipadapter.html",
-      "dependencies": []
-    },
-    "900_Glossary/Tensor.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 461,
-      "exportedPath": "900_glossary/tensor.html",
-      "dependencies": []
-    },
-    "900_Glossary/Transformer.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 140,
-      "exportedPath": "900_glossary/transformer.html",
-      "dependencies": []
-    },
-    "900_Glossary/U-Net.md": {
-      "modifiedTime": 1710579723015,
-      "sourceSize": 126,
-      "exportedPath": "900_glossary/u-net.html",
-      "dependencies": []
-    },
-    "900_Glossary/venv.md": {
-      "modifiedTime": 1710579723015,
+    "300-AIGC/390-Glossary/IPAdapter.md": {
+      "modifiedTime": 1710687172381,
       "sourceSize": 1338,
-      "exportedPath": "900_glossary/venv.html",
+      "exportedPath": "300-aigc/390-glossary/ipadapter.html",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/Pytorch.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 114,
+      "exportedPath": "300-aigc/390-glossary/pytorch.html",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/Tensor.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 1612,
+      "exportedPath": "300-aigc/390-glossary/tensor.html",
+      "dependencies": [
+        "lib/media/color_picture_tensor_diagram.jpeg"
+      ]
+    },
+    "300-AIGC/390-Glossary/token.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 445,
+      "exportedPath": "300-aigc/390-glossary/token.html",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/Torchvision.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 130,
+      "exportedPath": "300-aigc/390-glossary/torchvision.html",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/Transformer.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 140,
+      "exportedPath": "300-aigc/390-glossary/transformer.html",
+      "dependencies": []
+    },
+    "300-AIGC/390-Glossary/U-Net.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 788,
+      "exportedPath": "300-aigc/390-glossary/u-net.html",
+      "dependencies": [
+        "lib/media/unet-architecture.png"
+      ]
+    },
+    "300-AIGC/390-Glossary/venv.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 1338,
+      "exportedPath": "300-aigc/390-glossary/venv.html",
+      "dependencies": []
+    },
+    "300-AIGC/index.md": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 663,
+      "exportedPath": "300-aigc/index.html",
+      "dependencies": []
+    },
+    "lib/media/clip_contrastive_pre_training.svg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 243418,
+      "exportedPath": "lib/media/clip_contrastive_pre_training.svg",
+      "dependencies": []
+    },
+    "lib/media/clip_create_dataset_classifier_from_label_text.svg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 96112,
+      "exportedPath": "lib/media/clip_create_dataset_classifier_from_label_text.svg",
+      "dependencies": []
+    },
+    "lib/media/color_picture_tensor_diagram.jpeg": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 37284,
+      "exportedPath": "lib/media/color_picture_tensor_diagram.jpeg",
+      "dependencies": []
+    },
+    "lib/media/unet-architecture.png": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 103270,
+      "exportedPath": "lib/media/unet-architecture.png",
+      "dependencies": []
+    },
+    "lib/styles/other-plugins.css": {
+      "modifiedTime": 1710687172381,
+      "sourceSize": 2104,
+      "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     }
   }
